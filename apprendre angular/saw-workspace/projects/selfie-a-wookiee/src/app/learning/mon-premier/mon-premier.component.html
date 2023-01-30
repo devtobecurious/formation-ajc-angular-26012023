@@ -1,5 +1,7 @@
-<p>mon-premier works!</p>
+<p>{{ titre }}</p>
 
 <i *ngIf="items.length === 0">Aucun élément n'est présent</i>
 
 <b *ngFor="let item of items">{{ item.titre }}</b>
+
+<button (click)="clickToEnd()">Calcul fini</button>

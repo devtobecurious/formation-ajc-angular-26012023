@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MonPremierComponent } from './learning/mon-premier/mon-premier.component';
 import { ListSelfiesComponent } from './features/selfies/list-selfies/list-selfies.component';
 import { SelfiesModule } from './features/selfies/selfies.module';
+import { MenuAvecModuleModule } from './shared/ui/menu-avec-module/menu-avec-module.module';
+import { MenuPrincipalComponent } from './shared/ui/menus/menu-principal/menu-principal.component';
+import { MenuPrincipaleVUnComponent } from './shared/ui/menu-avec-module/menu-principale-v-un/menu-principale-v-un.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,14 @@ import { SelfiesModule } from './features/selfies/selfies.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SelfiesModule
+    SelfiesModule,
+    MenuAvecModuleModule,
+    MenuPrincipalComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    MenuPrincipaleVUnComponent
+  ]
 })
 export class AppModule { }

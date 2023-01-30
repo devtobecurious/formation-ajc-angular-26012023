@@ -1,1 +1,23 @@
-<p>list-selfies works!</p>
+<button (click)="clickToAdd()">[ + ]</button>
+<button (click)="clickToDelete(2)">[ - ]</button>
+
+<i *ngIf="! selfies || selfies.length === 0">Aucun selfie de pris</i>
+
+<table *ngIf="selfies && selfies.length > 0">
+  <thead>
+    <tr>
+      <th>Wookie</th>
+      <th>Titre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let selfie of selfies">
+      <td>
+        {{ selfie.wookie.prenom }}
+      </td>
+      <td>
+        {{ selfie.titre }}
+      </td>
+    </tr>
+  </tbody>
+</table>

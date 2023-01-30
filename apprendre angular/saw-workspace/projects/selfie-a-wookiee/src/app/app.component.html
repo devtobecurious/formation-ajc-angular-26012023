@@ -1,6 +1,17 @@
+<app-menu-principal></app-menu-principal>
+<!-- si on part sur un composant APP principal :
+  -->
+<!-- <app-menu-principale-v-un></app-menu-principale-v-un> -->
+
 <h1>{{ titreComponentAAfficher  }}</h1>
 
 <app-page-list-selfies></app-page-list-selfies>
+
+<button (click)="changeTitle('Test 1')">Changer titre</button>
+
+<app-mon-premier titre="Mon titre à moi"></app-mon-premier>
+<app-mon-premier titre="Titre 2"></app-mon-premier>
+<app-mon-premier (calculEstFini)="afficherCalcul($event)" [titre]="titrePourEnfant"></app-mon-premier>
 
 <!-- <app-mon-premier></app-mon-premier>
 <app-mon-premier></app-mon-premier>
