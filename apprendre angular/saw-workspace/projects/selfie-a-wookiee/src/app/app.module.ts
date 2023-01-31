@@ -9,21 +9,30 @@ import { SelfiesModule } from './features/selfies/selfies.module';
 import { MenuAvecModuleModule } from './shared/ui/menu-avec-module/menu-avec-module.module';
 import { MenuPrincipalComponent } from './shared/ui/menus/menu-principal/menu-principal.component';
 import { MenuPrincipaleVUnComponent } from './shared/ui/menu-avec-module/menu-principale-v-un/menu-principale-v-un.component';
+import { ListPlanetsService } from './features/planets/services/list-planets.service';
+import { PlanetsModule } from './features/planets/planets.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MaFirstCharacterPipe } from './shared/ui/ma-first-character.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MonPremierComponent,
+    MaFirstCharacterPipe,
     // ListSelfiesComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     SelfiesModule,
+    PlanetsModule,
     MenuAvecModuleModule,
     MenuPrincipalComponent
   ],
-  providers: [],
+  providers: [
+    // ListPlanetsService
+  ],
   bootstrap: [
     AppComponent,
     MenuPrincipaleVUnComponent

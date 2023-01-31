@@ -5,6 +5,8 @@
 
 <h1>{{ titreComponentAAfficher  }}</h1>
 
+<app-page-list-planets></app-page-list-planets>
+
 <app-page-list-selfies (editionSelfieFromPage)="afficherEditPanel($event)"></app-page-list-selfies>
 <app-edit-selfies [selfie]="selfieAEditer"
                   (leNomDeLeventCoteTemplate)="cancelEdit()"

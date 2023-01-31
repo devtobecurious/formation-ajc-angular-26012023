@@ -1,0 +1,5 @@
+<ul *ngIf="planetsResult$ | async as result">
+  <li *ngFor="let planet of result.results">
+    {{ planet.name }}
+  </li>
+</ul>
