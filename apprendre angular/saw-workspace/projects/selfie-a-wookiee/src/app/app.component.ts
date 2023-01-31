@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Selfie } from './features/selfies/models';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   titreComponentAAfficher = 'selfie a wookiee';
   titrePourEnfant = 'Titre pour enfant';
+  selfieAEditer: Selfie | undefined | null;
 
   changeTitle(value: string): void {
     let valueFromPrompt = prompt('Donne moi un titre');
@@ -19,5 +21,13 @@ export class AppComponent {
 
   afficherCalcul(resultat: number): void {
     console.info(resultat);
+  }
+
+  afficherEditPanel(selfie: Selfie): void {
+    this.selfieAEditer = selfie;
+  }
+
+  cancelEdit(): void {
+    this.selfieAEditer = null;
   }
 }

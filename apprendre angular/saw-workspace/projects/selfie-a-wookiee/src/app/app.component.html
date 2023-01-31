@@ -5,13 +5,18 @@
 
 <h1>{{ titreComponentAAfficher  }}</h1>
 
-<app-page-list-selfies></app-page-list-selfies>
+<app-page-list-selfies (editionSelfieFromPage)="afficherEditPanel($event)"></app-page-list-selfies>
+<app-edit-selfies [selfie]="selfieAEditer"
+                  (leNomDeLeventCoteTemplate)="cancelEdit()"
+                  *ngIf="selfieAEditer"></app-edit-selfies>
 
-<button (click)="changeTitle('Test 1')">Changer titre</button>
+
+<!-- <button (click)="changeTitle('Test 1')">Changer titre</button>
 
 <app-mon-premier titre="Mon titre à moi"></app-mon-premier>
 <app-mon-premier titre="Titre 2"></app-mon-premier>
-<app-mon-premier (calculEstFini)="afficherCalcul($event)" [titre]="titrePourEnfant"></app-mon-premier>
+<app-mon-premier (calculEstFini)="afficherCalcul($event)"
+                 [titre]="titrePourEnfant"></app-mon-premier> -->
 
 <!-- <app-mon-premier></app-mon-premier>
 <app-mon-premier></app-mon-premier>

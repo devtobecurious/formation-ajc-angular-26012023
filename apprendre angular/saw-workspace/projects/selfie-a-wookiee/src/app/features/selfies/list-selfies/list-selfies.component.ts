@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Selfie, Wookie } from '../models';
 
 @Component({
@@ -7,6 +7,8 @@ import { Selfie, Wookie } from '../models';
   styleUrls: ['./list-selfies.component.css']
 })
 export class ListSelfiesComponent {
+  @Output() editerSelfie = new EventEmitter<Selfie>();
+
   selfies: Selfie[] = [];
   wookie: Wookie = {
     prenom: 'Chewie'
@@ -27,6 +29,10 @@ export class ListSelfiesComponent {
         titre: 'Oh non voila Jabba'
       }
     );
+  }
+
+  clickToEdit(selfie: Selfie): void {
+    this.editerSelfie.emit(selfie);
   }
 
   clickToAdd(): void {
