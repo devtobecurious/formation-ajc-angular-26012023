@@ -6,14 +6,14 @@
 <h1>{{ titreComponentAAfficher  }}</h1>
 
 <!-- <app-discover-observable></app-discover-observable> -->
-<app-obs-et-operators></app-obs-et-operators>
+<!-- <app-obs-et-operators></app-obs-et-operators>
 
 <app-page-list-planets></app-page-list-planets>
 
 <app-page-list-selfies (editionSelfieFromPage)="afficherEditPanel($event)"></app-page-list-selfies>
 <app-edit-selfies [selfie]="selfieAEditer"
                   (leNomDeLeventCoteTemplate)="cancelEdit()"
-                  *ngIf="selfieAEditer"></app-edit-selfies>
+                  *ngIf="selfieAEditer"></app-edit-selfies> -->
 
 
 <!-- <button (click)="changeTitle('Test 1')">Changer titre</button>
@@ -27,3 +27,6 @@
 <app-mon-premier></app-mon-premier>
 <app-mon-premier></app-mon-premier>
 <app-mon-premier></app-mon-premier> -->
+
+<router-outlet></router-outlet>
+<!-- (au dessous du router outlet => C'est ici que le component de la route active va se charger -->

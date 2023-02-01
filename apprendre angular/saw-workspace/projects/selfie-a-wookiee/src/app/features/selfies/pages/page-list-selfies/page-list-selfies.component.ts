@@ -8,8 +8,10 @@ import { Selfie } from '../../models';
 })
 export class PageListSelfiesComponent {
   @Output() editionSelfieFromPage = new EventEmitter<Selfie>();
+  selfieAEditer !: Selfie;
 
   recuperEdition(selfie: Selfie): void {
+    this.selfieAEditer = selfie;
     this.editionSelfieFromPage.emit(selfie);
   }
 }

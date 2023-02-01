@@ -1,2 +1,5 @@
 <h1>Liste des selfies</h1>
 <app-list-selfies (editerSelfie)="recuperEdition($event)"></app-list-selfies>
+
+<app-edit-selfies [selfie]="selfieAEditer"
+                  *ngIf="selfieAEditer"></app-edit-selfies>

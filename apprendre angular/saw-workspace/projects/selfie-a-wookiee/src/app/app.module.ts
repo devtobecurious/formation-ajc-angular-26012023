@@ -16,6 +16,7 @@ import { MaFirstCharacterPipe } from './shared/ui/ma-first-character.pipe';
 import { DiscoverObservableComponent } from './learning/observables/discover-observable/discover-observable.component';
 import { ObsEtOperatorsComponent } from './learning/observables/obs-et-operators/obs-et-operators.component';
 import { MeteoModule } from './features/meteo/meteo.module';
+import { HomeComponent } from './features/main/home/home.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MeteoModule } from './features/meteo/meteo.module';
     MenuAvecModuleModule,
     MenuPrincipalComponent,
     DiscoverObservableComponent,
-    ObsEtOperatorsComponent
+    ObsEtOperatorsComponent,
+    HomeComponent
   ],
   providers: [
     // ListPlanetsService
