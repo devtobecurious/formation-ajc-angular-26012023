@@ -13,6 +13,8 @@ import { ListPlanetsService } from './features/planets/services/list-planets.ser
 import { PlanetsModule } from './features/planets/planets.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MaFirstCharacterPipe } from './shared/ui/ma-first-character.pipe';
+import { DiscoverObservableComponent } from './learning/observables/discover-observable/discover-observable.component';
+import { ObsEtOperatorsComponent } from './learning/observables/obs-et-operators/obs-et-operators.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MaFirstCharacterPipe } from './shared/ui/ma-first-character.pipe';
     SelfiesModule,
     PlanetsModule,
     MenuAvecModuleModule,
-    MenuPrincipalComponent
+    MenuPrincipalComponent,
+    DiscoverObservableComponent,
+    ObsEtOperatorsComponent
   ],
   providers: [
     // ListPlanetsService
