@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaFirstCharacterPipe } from './shared/ui/ma-first-character.pipe';
 import { DiscoverObservableComponent } from './learning/observables/discover-observable/discover-observable.component';
 import { ObsEtOperatorsComponent } from './learning/observables/obs-et-operators/obs-et-operators.component';
+import { MeteoModule } from './features/meteo/meteo.module';
 
 @NgModule({
   declarations: [
